@@ -6,6 +6,7 @@
     <title>Derly Chitiva - Psicóloga | Tu Bienestar Emocional</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <header>
@@ -16,10 +17,14 @@
                     <span>Psicóloga</span>
                 </a>
             </div>
-            <ul>
+            <button class="hamburger-menu" id="hamburgerMenu" aria-label="Abrir menú de navegación">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul id="navMenu">
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#sobre-mi">Sobre Mí</a></li>
                 <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#testimonios">Testimonios</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
@@ -66,18 +71,28 @@
             </div>
         </section>
 
-        <!-- Opcional: Sección de Testimonios (descomentar y rellenar si se tienen) -->
-        <!--
         <section id="testimonios" class="testimonials">
             <div class="container">
                 <h3>Lo que dicen mis pacientes</h3>
-                <div class="testimonial-item">
-                    <p>"La Dra. Chitiva me ayudó a encontrar la claridad que necesitaba. Su empatía y profesionalismo son excepcionales."</p>
-                    <span>- Nombre del Paciente</span>
+                <div class="testimonial-grid">
+                    <div class="testimonial-item">
+                        <img src="https://via.placeholder.com/80/4a7c92/ffffff?text=P1" alt="Foto del Paciente 1" class="testimonial-img">
+                        <p>"La Dra. Chitiva me ayudó a encontrar la claridad que necesitaba. Su empatía y profesionalismo son excepcionales."</p>
+                        <span>- Ana G.</span>
+                    </div>
+                    <div class="testimonial-item">
+                        <img src="https://via.placeholder.com/80/4a7c92/ffffff?text=P2" alt="Foto del Paciente 2" class="testimonial-img">
+                        <p>"Gracias a su guía, he podido superar momentos difíciles y hoy me siento mucho más fuerte y en paz."</p>
+                        <span>- Carlos M.</span>
+                    </div>
+                    <div class="testimonial-item">
+                        <img src="https://via.placeholder.com/80/4a7c92/ffffff?text=P3" alt="Foto del Paciente 3" class="testimonial-img">
+                        <p>"Un espacio seguro y de total confianza. Recomiendo ampliamente a Derly por su profesionalismo y calidez."</p>
+                        <span>- Sofía R.</span>
+                    </div>
                 </div>
             </div>
         </section>
-        -->
 
         <section id="contacto" class="contact">
             <div class="container">
@@ -92,10 +107,19 @@
         </section>
     </main>
 
+    <a href="https://wa.me/573001234567" class="whatsapp-btn" target="_blank" aria-label="Chatear por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <a href="#inicio" class="back-to-top" id="backToTop" aria-label="Volver al inicio">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
     <footer>
         <div class="container">
             <p>&copy; 2023 Derly Chitiva - Psicóloga. Todos los derechos reservados.</p>
         </div>
     </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>
