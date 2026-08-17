@@ -4,8 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Derly Chitiva - Psicóloga | Tu Bienestar Emocional</title>
+    <meta name="description" content="Psicóloga Derly Chitiva. Acompañamiento psicológico profesional y empático: terapia individual, de pareja, familiar y consultas online. Agenda tu cita.">
+    <meta name="theme-color" content="#4a7c92">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Derly Chitiva - Psicóloga | Tu Bienestar Emocional">
+    <meta property="og:description" content="Acompañamiento psicológico profesional y empático para tu crecimiento personal. Terapia individual, de pareja, familiar y consultas online.">
+    <meta property="og:url" content="https://galking-droid.github.io/pagina-psicologia/">
+    <meta property="og:locale" content="es_CO">
+    <meta name="twitter:card" content="summary">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='46' fill='%234a7c92'/><text x='50' y='70' font-size='56' text-anchor='middle' fill='%23ffffff' font-family='Arial,sans-serif' font-weight='bold'>D</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -17,55 +29,127 @@
                     <span>Psicóloga</span>
                 </a>
             </div>
-            <button class="hamburger-menu" id="hamburgerMenu" aria-label="Abrir menú de navegación">
+            <button class="hamburger-menu" id="hamburgerMenu" aria-label="Abrir menú de navegación" aria-controls="navMenu" aria-expanded="false">
                 <i class="fas fa-bars"></i>
             </button>
-            <ul id="navMenu">
+            <ul id="navMenu" role="navigation" aria-label="Menú principal">
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#sobre-mi">Sobre Mí</a></li>
                 <li><a href="#servicios">Servicios</a></li>
                 <li><a href="#testimonios">Testimonios</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
+            <a href="#contacto" class="btn nav-cta">Agenda tu Cita</a>
         </nav>
     </header>
 
+    <div class="menu-backdrop" id="menuBackdrop"></div>
+
     <main>
         <section id="inicio" class="hero">
-            <div class="hero-content">
+            <div class="hero-content reveal">
+                <span class="hero-badge"><i class="fas fa-heart"></i> Psicóloga Clínica</span>
                 <h2>Tu Bienestar Emocional, Mi Prioridad</h2>
                 <p>Acompañamiento psicológico profesional y empático para tu crecimiento personal.</p>
-                <a href="#contacto" class="btn">Agenda tu Cita</a>
+                <div class="hero-actions">
+                    <a href="https://wa.me/573001234567?text=Hola%20Derly%2C%20me%20gustar%C3%ADa%20agendar%20una%20cita." class="btn" target="_blank" rel="noopener">
+                        <i class="fab fa-whatsapp"></i> Agenda tu Cita
+                    </a>
+                    <a href="#servicios" class="btn btn-secondary">Conoce mis Servicios</a>
+                </div>
             </div>
+            <a href="#sobre-mi" class="scroll-down" aria-label="Desplazarse hacia abajo">
+                <i class="fas fa-chevron-down"></i>
+            </a>
         </section>
 
         <section id="sobre-mi" class="about">
             <div class="container">
-                <h3>Sobre Mí</h3>
-                <p>Soy Derly Chitiva, psicóloga con una profunda vocación por el bienestar humano. Mi enfoque se centra en crear un espacio seguro y de confianza donde puedas explorar tus emociones, superar desafíos y desarrollar herramientas para una vida plena. Cuento con experiencia en [mencionar áreas específicas, e.g., terapia cognitivo-conductual, manejo de ansiedad, depresión, terapia de pareja].</p>
-                <p>Mi compromiso es ofrecerte un acompañamiento personalizado, basado en la ética profesional y el respeto por tu individualidad.</p>
+                <div class="about-grid reveal">
+                    <div class="about-image">
+                        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Derly Chitiva, psicóloga clínica">
+                    </div>
+                    <div class="about-text">
+                        <h3>Sobre Mí</h3>
+                        <p>Soy Derly Chitiva, psicóloga con una profunda vocación por el bienestar humano. Mi enfoque se centra en crear un espacio seguro y de confianza donde puedas explorar tus emociones, superar desafíos y desarrollar herramientas para una vida plena.</p>
+                        <p>Cuento con experiencia en terapia cognitivo-conductual y manejo de:</p>
+                        <ul class="about-list">
+                            <li><i class="fas fa-check-circle"></i> Ansiedad y estrés</li>
+                            <li><i class="fas fa-check-circle"></i> Depresión y duelos</li>
+                            <li><i class="fas fa-check-circle"></i> Autoestima y crecimiento personal</li>
+                            <li><i class="fas fa-check-circle"></i> Terapia de pareja</li>
+                        </ul>
+                        <p>Mi compromiso es ofrecerte un acompañamiento personalizado, basado en la ética profesional y el respeto por tu individualidad.</p>
+                        <a href="#contacto" class="btn btn-secondary about-cta">Hablemos</a>
+                    </div>
+                </div>
+                <div class="stats reveal">
+                    <div class="stat-item">
+                        <p class="stat-number">+10</p>
+                        <p class="stat-label">Años de experiencia</p>
+                    </div>
+                    <div class="stat-item">
+                        <p class="stat-number">+500</p>
+                        <p class="stat-label">Pacientes acompañados</p>
+                    </div>
+                    <div class="stat-item">
+                        <p class="stat-number">100%</p>
+                        <p class="stat-label">Confidencialidad</p>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section id="servicios" class="services">
             <div class="container">
-                <h3>Mis Servicios</h3>
-                <div class="service-grid">
+                <h3 class="reveal">Mis Servicios</h3>
+                <div class="service-grid reveal">
                     <div class="service-item">
+                        <div class="service-icon"><i class="fas fa-user"></i></div>
                         <h4>Terapia Individual</h4>
                         <p>Espacio personal para abordar ansiedad, estrés, depresión, duelos, autoestima y crecimiento personal.</p>
+                        <a href="https://wa.me/573001234567?text=Hola%20Derly%2C%20me%20interesa%20la%20terapia%20individual." class="service-link" target="_blank" rel="noopener">Agendar <i class="fas fa-arrow-right"></i></a>
                     </div>
                     <div class="service-item">
+                        <div class="service-icon"><i class="fas fa-heart"></i></div>
                         <h4>Terapia de Pareja</h4>
                         <p>Ayuda a fortalecer la comunicación, resolver conflictos y construir una relación más sana y feliz.</p>
+                        <a href="https://wa.me/573001234567?text=Hola%20Derly%2C%20me%20interesa%20la%20terapia%20de%20pareja." class="service-link" target="_blank" rel="noopener">Agendar <i class="fas fa-arrow-right"></i></a>
                     </div>
                     <div class="service-item">
+                        <div class="service-icon"><i class="fas fa-users"></i></div>
                         <h4>Terapia Familiar</h4>
                         <p>Intervención para mejorar la dinámica familiar, comunicación y resolución de problemas entre sus miembros.</p>
+                        <a href="https://wa.me/573001234567?text=Hola%20Derly%2C%20me%20interesa%20la%20terapia%20familiar." class="service-link" target="_blank" rel="noopener">Agendar <i class="fas fa-arrow-right"></i></a>
                     </div>
                     <div class="service-item">
+                        <div class="service-icon"><i class="fas fa-video"></i></div>
                         <h4>Consultas Online</h4>
                         <p>Flexibilidad y comodidad para recibir apoyo psicológico desde cualquier lugar.</p>
+                        <a href="https://wa.me/573001234567?text=Hola%20Derly%2C%20me%20interesa%20una%20consulta%20online." class="service-link" target="_blank" rel="noopener">Agendar <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="como-funciona" class="steps">
+            <div class="container">
+                <h3 class="reveal">¿Cómo Funciona?</h3>
+                <div class="steps-grid reveal">
+                    <div class="step-item">
+                        <div class="step-icon"><i class="fas fa-calendar-check"></i></div>
+                        <h4>1. Agenda tu Cita</h4>
+                        <p>Escoge el medio que prefieras: WhatsApp, llamada o el formulario de contacto.</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-icon"><i class="fas fa-comments"></i></div>
+                        <h4>2. Primera Sesión</h4>
+                        <p>Conversamos en un espacio seguro para entender tu situación y tus objetivos.</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-icon"><i class="fas fa-seedling"></i></div>
+                        <h4>3. Acompañamiento</h4>
+                        <p>Diseñamos juntos tu proceso y te acompaño paso a paso hacia tu bienestar.</p>
                     </div>
                 </div>
             </div>
@@ -73,41 +157,118 @@
 
         <section id="testimonios" class="testimonials">
             <div class="container">
-                <h3>Lo que dicen mis pacientes</h3>
-                <div class="testimonial-grid">
+                <h3 class="reveal">Lo que dicen mis pacientes</h3>
+                <div class="testimonial-grid reveal">
                     <div class="testimonial-item">
-                        <img src="https://via.placeholder.com/80/4a7c92/ffffff?text=P1" alt="Foto del Paciente 1" class="testimonial-img">
+                        <div class="testimonial-avatar">AG</div>
+                        <div class="testimonial-stars" aria-label="5 de 5 estrellas">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
                         <p>"La Dra. Chitiva me ayudó a encontrar la claridad que necesitaba. Su empatía y profesionalismo son excepcionales."</p>
-                        <span>- Ana G.</span>
+                        <span class="testimonial-name">- Ana G.</span>
                     </div>
                     <div class="testimonial-item">
-                        <img src="https://via.placeholder.com/80/4a7c92/ffffff?text=P2" alt="Foto del Paciente 2" class="testimonial-img">
+                        <div class="testimonial-avatar">CM</div>
+                        <div class="testimonial-stars" aria-label="5 de 5 estrellas">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
                         <p>"Gracias a su guía, he podido superar momentos difíciles y hoy me siento mucho más fuerte y en paz."</p>
-                        <span>- Carlos M.</span>
+                        <span class="testimonial-name">- Carlos M.</span>
                     </div>
                     <div class="testimonial-item">
-                        <img src="https://via.placeholder.com/80/4a7c92/ffffff?text=P3" alt="Foto del Paciente 3" class="testimonial-img">
+                        <div class="testimonial-avatar">SR</div>
+                        <div class="testimonial-stars" aria-label="5 de 5 estrellas">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
                         <p>"Un espacio seguro y de total confianza. Recomiendo ampliamente a Derly por su profesionalismo y calidez."</p>
-                        <span>- Sofía R.</span>
+                        <span class="testimonial-name">- Sofía R.</span>
                     </div>
                 </div>
             </div>
         </section>
 
+        <div class="cta-band reveal">
+            <div class="container">
+                <h3>¿Listo para dar el primer paso?</h3>
+                <p>Dar el primer paso es el más importante. Te acompaño con respeto y calidez en tu proceso.</p>
+                <a href="https://wa.me/573001234567?text=Hola%20Derly%2C%20me%20gustar%C3%ADa%20agendar%20una%20cita." class="btn" target="_blank" rel="noopener">
+                    <i class="fab fa-whatsapp"></i> Agenda tu Cita por WhatsApp
+                </a>
+            </div>
+        </div>
+
         <section id="contacto" class="contact">
             <div class="container">
-                <h3>Contáctame</h3>
-                <p>Estoy aquí para escucharte. No dudes en agendar una cita o resolver tus dudas.</p>
-                <div class="contact-info">
-                    <p><strong>Teléfono:</strong> <a href="tel:+573001234567">+57 300 123 4567</a></p>
-                    <p><strong>Email:</strong> <a href="mailto:derly.chitiva.psicologa@email.com">derly.chitiva.psicologa@email.com</a></p>
-                    <p><strong>WhatsApp:</strong> <a href="https://wa.me/573001234567" target="_blank">Enviar Mensaje</a></p>
+                <h3 class="reveal">Contáctame</h3>
+                <p class="contact-subtitle">Estoy aquí para escucharte. No dudes en agendar una cita o resolver tus dudas.</p>
+                <div class="contact-grid reveal">
+                    <div class="contact-info">
+                        <div class="contact-method">
+                            <div class="icon"><i class="fas fa-phone-alt"></i></div>
+                            <div>
+                                <strong>Teléfono</strong>
+                                <a href="tel:+573001234567">+57 300 123 4567</a>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="icon"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <strong>Email</strong>
+                                <a href="mailto:derly.chitiva.psicologa@email.com">derly.chitiva.psicologa@email.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="icon"><i class="fab fa-whatsapp"></i></div>
+                            <div>
+                                <strong>WhatsApp</strong>
+                                <a href="https://wa.me/573001234567" target="_blank" rel="noopener">Enviar mensaje directo</a>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="icon"><i class="fas fa-clock"></i></div>
+                            <div>
+                                <strong>Horario de atención</strong>
+                                <span>Lunes a Sábado · 8:00 a.m. - 7:00 p.m.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form class="contact-form" id="contactForm" novalidate>
+                        <h4>Envíame un mensaje</h4>
+                        <div class="form-group" id="nameGroup">
+                            <label for="name">Nombre completo</label>
+                            <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+                            <span class="error-msg">Por favor ingresa tu nombre.</span>
+                        </div>
+                        <div class="form-group" id="emailGroup">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" required>
+                            <span class="error-msg">Ingresa un email válido.</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Servicio de interés</label>
+                            <select id="service" name="service">
+                                <option value="Terapia Individual">Terapia Individual</option>
+                                <option value="Terapia de Pareja">Terapia de Pareja</option>
+                                <option value="Terapia Familiar">Terapia Familiar</option>
+                                <option value="Consulta Online">Consulta Online</option>
+                                <option value="Otro">Otro</option>
+                            </select>
+                        </div>
+                        <div class="form-group" id="messageGroup">
+                            <label for="message">Mensaje</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Cuéntame brevemente cómo puedo ayudarte" required></textarea>
+                            <span class="error-msg">Escribe un breve mensaje.</span>
+                        </div>
+                        <button type="submit" class="btn btn-block"><i class="fab fa-whatsapp"></i> Enviar por WhatsApp</button>
+                        <p class="form-note">Tu información es confidencial y solo se usará para responder tu solicitud.</p>
+                    </form>
                 </div>
             </div>
         </section>
     </main>
 
-    <a href="https://wa.me/573001234567" class="whatsapp-btn" target="_blank" aria-label="Chatear por WhatsApp">
+    <a href="https://wa.me/573001234567?text=Hola%20Derly%2C%20me%20gustar%C3%ADa%20agendar%20una%20cita." class="whatsapp-btn" target="_blank" rel="noopener" aria-label="Chatear por WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -117,7 +278,47 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2023 Derly Chitiva - Psicóloga. Todos los derechos reservados.</p>
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h4>Derly Chitiva</h4>
+                    <span class="footer-tagline">Psicóloga</span>
+                    <p>Acompañamiento psicológico profesional y empático para tu bienestar emocional.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#sobre-mi">Sobre Mí</a></li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#testimonios">Testimonios</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="#servicios">Terapia Individual</a></li>
+                        <li><a href="#servicios">Terapia de Pareja</a></li>
+                        <li><a href="#servicios">Terapia Familiar</a></li>
+                        <li><a href="#servicios">Consultas Online</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><a href="tel:+573001234567"><i class="fas fa-phone-alt"></i> +57 300 123 4567</a></li>
+                        <li><a href="mailto:derly.chitiva.psicologa@email.com"><i class="fas fa-envelope"></i> Escríbeme</a></li>
+                        <li><a href="https://wa.me/573001234567" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Derly Chitiva - Psicóloga. Todos los derechos reservados.</p>
         </div>
     </footer>
     <script src="js/script.js"></script>
