@@ -12,7 +12,7 @@ const observer = new IntersectionObserver((entries) => {
             });
         }
     });
-}, { threshold: 0.55 });
+}, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
 
 sections.forEach(section => observer.observe(section));
 
@@ -40,18 +40,25 @@ const revealObserver = new IntersectionObserver((entries) => {
 
 revealElements.forEach(el => revealObserver.observe(el));
 
-// Parallax sutil en hero (respeta reduced-motion)
-const parallaxEl = document.querySelector('[data-parallax]');
-const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+// Media queries compartidas (movimiento responsable)
+const desktopMQ = window.matchMedia('(min-width: 981px)');
+const reducedMotionMQ = window.matchMedia('(prefers-reduced-motion: reduce)');
 
-if (parallaxEl && !prefersReduced) {
+// Parallax sutil en hero: solo desktop y sin reduced-motion
+const parallaxEl = document.querySelector('[data-parallax]');
+
+if (parallaxEl) {
     let ticking = false;
     window.addEventListener('scroll', () => {
         if (ticking) return;
         ticking = true;
         requestAnimationFrame(() => {
-            const offset = Math.min(window.scrollY * 0.08, 36);
-            parallaxEl.style.transform = `translateY(${offset}px)`;
+            if (!desktopMQ.matches || reducedMotionMQ.matches) {
+                parallaxEl.style.transform = '';
+            } else {
+                const offset = Math.min(window.scrollY * 0.08, 36);
+                parallaxEl.style.transform = `translateY(${offset}px)`;
+            }
             ticking = false;
         });
     }, { passive: true });
@@ -115,7 +122,7 @@ if (track && dotsWrap) {
         dot.setAttribute('aria-label', `Ir al testimonio ${i + 1}`);
         if (i === 0) dot.classList.add('active');
         dot.addEventListener('click', () => {
-            cards[i].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+            cards[i].scrollIntoView({ behavior: reducedMotionMQ.matches ? 'auto' : 'smooth', inline: 'center', block: 'nearest' });
         });
         dotsWrap.appendChild(dot);
     });
@@ -140,7 +147,7 @@ if (track && dotsWrap) {
     const scrollByCard = (dir) => {
         const gap = 20;
         const w = cards[0].offsetWidth + gap;
-        track.scrollBy({ left: dir * w, behavior: 'smooth' });
+        track.scrollBy({ left: dir * w, behavior: reducedMotionMQ.matches ? 'auto' : 'smooth' });
     };
     if (prevBtn) prevBtn.addEventListener('click', () => scrollByCard(-1));
     if (nextBtn) nextBtn.addEventListener('click', () => scrollByCard(1));
@@ -170,6 +177,11 @@ if (contactForm) {
     [nameInput, emailInput, messageInput].forEach(input => {
         input.addEventListener('input', () => input.closest('.form-group').classList.remove('invalid'));
     });
+    const toast = document.getElementById('formToast');
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+    const showToast = (html) => { toast.innerHTML = html; toast.classList.add('show'); };
+    const hideToast = () => toast.classList.remove('show');
+
     contactForm.addEventListener('submit', (event) => {
         event.preventDefault();
         const vName = validateField(nameInput, nameGroup, v => v.length >= 2);
@@ -178,7 +190,20 @@ if (contactForm) {
         if (!vName || !vEmail || !vMsg) return;
         const service = document.getElementById('service').value;
         const text = `Hola Derly, soy ${nameInput.value.trim()}.${service ? ` Me interesa: ${service}.` : ''} ${messageInput.value.trim()}`;
-        window.open(`https://wa.me/573001234567?text=${encodeURIComponent(text)}`, '_blank', 'noopener');
-        contactForm.reset();
+        const url = `https://wa.me/573001234567?text=${encodeURIComponent(text)}`;
+        submitBtn.disabled = true;
+        showToast('Abriendo WhatsApp con tu mensaje…');
+        const popup = window.open(url, '_blank', 'noopener');
+        window.setTimeout(() => {
+            submitBtn.disabled = false;
+            if (popup && !popup.closed) {
+                showToast('¡Listo! Revisa WhatsApp para enviar tu mensaje.');
+                contactForm.reset();
+                window.setTimeout(hideToast, 3500);
+            } else {
+                // Popup bloqueado: no se pierde lo escrito
+                showToast(`Tu navegador bloqueó la ventana. <a href="${url}" target="_blank" rel="noopener">Toca aquí para abrir WhatsApp</a>.`);
+            }
+        }, 900);
     });
 }
