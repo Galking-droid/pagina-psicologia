@@ -12,6 +12,21 @@
     <meta property="og:url" content="https://pagina-psicologia-ruby.vercel.app/">
     <meta property="og:locale" content="es_CO">
     <meta name="twitter:card" content="summary">
+    <meta property="og:image" content="https://pagina-psicologia-ruby.vercel.app/img/og-cover.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:image" content="https://pagina-psicologia-ruby.vercel.app/img/og-cover.jpg">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Derly Chitiva - Psicóloga",
+        "description": "Acompañamiento psicológico profesional y empático: terapia individual, de pareja, familiar y consultas online.",
+        "url": "https://pagina-psicologia-ruby.vercel.app/",
+        "areaServed": "CO",
+        "telephone": "+57 300 123 4567"
+    }
+    </script>
     <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
     <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,7 +41,7 @@
         <nav>
             <div class="logo">
                 <a href="index.html">
-                    <h1>Derly Chitiva</h1>
+                    <p class="logo-name">Derly Chitiva</p>
                     <span>Psicóloga</span>
                 </a>
             </div>
@@ -52,7 +67,7 @@
             <div class="hero-inner">
                 <div class="hero-copy reveal">
                     <span class="hero-eyebrow"><i class="fas fa-leaf"></i> Psicóloga · Atención presencial y online</span>
-                    <h2><span class="hero-serif">Un espacio</span> para volver a ti</h2>
+                    <h1><span class="hero-serif">Un espacio</span> para volver a ti <span class="sr-only">con Derly Chitiva, psicóloga</span></h1>
                     <p>Acompañamiento psicológico que inspira <strong>calma, confianza y claridad</strong>. Un lugar seguro para explorar lo que sientes y construir herramientas para tu día a día.</p>
                     <div class="hero-actions">
                         <a href="https://wa.me/573001234567?text=Hola%20Derly%2C%20me%20gustar%C3%ADa%20agendar%20una%20cita." class="btn" target="_blank" rel="noopener">
@@ -210,29 +225,29 @@
                 <div class="carousel-wrap reveal">
                     <button class="carousel-btn prev" id="prevTestimonial" aria-label="Testimonio anterior"><i class="fas fa-chevron-left"></i></button>
                     <div class="testimonial-track" id="testimonialTrack" role="region" aria-roledescription="carrusel" aria-label="Testimonios de pacientes" tabindex="0">
-                        <article class="testimonial-card">
+                        <article class="testimonial-card" itemscope itemtype="https://schema.org/Review">
                             <div class="testimonial-avatar">AG</div>
                             <div class="testimonial-stars" aria-label="5 de 5 estrellas"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                            <p>“La Dra. Chitiva me ayudó a encontrar la claridad que necesitaba. Su empatía y profesionalismo son excepcionales.”</p>
-                            <span class="testimonial-name">Ana G.</span>
+                            <p itemprop="reviewBody">“La Dra. Chitiva me ayudó a encontrar la claridad que necesitaba. Su empatía y profesionalismo son excepcionales.”</p>
+                            <span class="testimonial-name" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Ana G.</span></span>
                         </article>
-                        <article class="testimonial-card">
+                        <article class="testimonial-card" itemscope itemtype="https://schema.org/Review">
                             <div class="testimonial-avatar">CM</div>
                             <div class="testimonial-stars" aria-label="5 de 5 estrellas"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                            <p>“Gracias a su guía superé momentos difíciles y hoy me siento mucho más fuerte y en paz.”</p>
-                            <span class="testimonial-name">Carlos M.</span>
+                            <p itemprop="reviewBody">“Gracias a su guía superé momentos difíciles y hoy me siento mucho más fuerte y en paz.”</p>
+                            <span class="testimonial-name" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Carlos M.</span></span>
                         </article>
-                        <article class="testimonial-card">
+                        <article class="testimonial-card" itemscope itemtype="https://schema.org/Review">
                             <div class="testimonial-avatar">SR</div>
                             <div class="testimonial-stars" aria-label="5 de 5 estrellas"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                            <p>“Un espacio seguro y de total confianza. Recomiendo a Derly por su calidez y profesionalismo.”</p>
-                            <span class="testimonial-name">Sofía R.</span>
+                            <p itemprop="reviewBody">“Un espacio seguro y de total confianza. Recomiendo a Derly por su calidez y profesionalismo.”</p>
+                            <span class="testimonial-name" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Sofía R.</span></span>
                         </article>
-                        <article class="testimonial-card">
+                        <article class="testimonial-card" itemscope itemtype="https://schema.org/Review">
                             <div class="testimonial-avatar">LM</div>
                             <div class="testimonial-stars" aria-label="5 de 5 estrellas"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                            <p>“Me sentí escuchada desde el primer día. Herramientas claras que aplico en mi día a día.”</p>
-                            <span class="testimonial-name">Laura M.</span>
+                            <p itemprop="reviewBody">“Me sentí escuchada desde el primer día. Herramientas claras que aplico en mi día a día.”</p>
+                            <span class="testimonial-name" itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">Laura M.</span></span>
                         </article>
                     </div>
                     <button class="carousel-btn next" id="nextTestimonial" aria-label="Testimonio siguiente"><i class="fas fa-chevron-right"></i></button>
