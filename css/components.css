@@ -40,7 +40,7 @@
     transform: rotate(-2deg);
 }
 .hero-photo {
-    position: relative; width: 100%; aspect-ratio: 4/4.6; object-fit: cover;
+    position: relative; width: 100%; height: auto; aspect-ratio: 4/4.6; object-fit: cover;
     border-radius: 42% 58% 55% 45% / 45% 45% 55% 55%;
     box-shadow: var(--shadow-lg); display: block;
 }
@@ -55,7 +55,7 @@
 /* Sobre mí */
 .about-photo-wrap { position: relative; }
 .about-photo-wrap img {
-    width: 100%; border-radius: var(--radius-xl); box-shadow: var(--shadow-md); display: block;
+    width: 100%; height: auto; border-radius: var(--radius-xl); box-shadow: var(--shadow-md); display: block;
 }
 .about-photo-wrap::before {
     content: ''; position: absolute; inset: -14px 18px 18px -14px;
