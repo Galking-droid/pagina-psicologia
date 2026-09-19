@@ -284,12 +284,13 @@ nav ul li a.active { background: var(--primary-color); color: var(--white); }
 .testimonial-avatar {
     width: 64px; height: 64px; border-radius: 50%; margin: 0 auto 14px;
     display: flex; align-items: center; justify-content: center;
-    color: var(--white); font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 1.3rem;
+    color: var(--primary-dark); font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 1.3rem;
+    border: 2px solid rgba(61, 90, 108, 0.15);
 }
-.testimonial-card:nth-child(1) .testimonial-avatar { background: var(--sage-mid); }
-.testimonial-card:nth-child(2) .testimonial-avatar { background: var(--primary-color); }
-.testimonial-card:nth-child(3) .testimonial-avatar { background: #C9A99A; }
-.testimonial-card:nth-child(4) .testimonial-avatar { background: #8FB5A8; }
+.testimonial-card:nth-child(1) .testimonial-avatar { background: var(--sage-light); }
+.testimonial-card:nth-child(2) .testimonial-avatar { background: var(--powder-blue); }
+.testimonial-card:nth-child(3) .testimonial-avatar { background: var(--sand); }
+.testimonial-card:nth-child(4) .testimonial-avatar { background: var(--sand-light); }
 .testimonial-stars { color: var(--star-color); margin-bottom: 12px; font-size: 0.85rem; }
 .testimonial-card p { color: var(--light-text); font-style: italic; font-size: 0.97rem; }
 .testimonial-name { display: block; margin-top: 12px; font-weight: 700; color: var(--primary-color); }
@@ -369,6 +370,8 @@ footer { background: var(--primary-dark); color: #E8EEF1; padding-top: 56px; }
     display: flex; align-items: center; justify-content: center; color: var(--white); text-decoration: none; transition: var(--transition);
 }
 .social-links a:hover { background: var(--sage-mid); transform: translateY(-2px); }
+.social-links a[aria-disabled="true"] { opacity: 0.55; cursor: default; }
+.social-links a[aria-disabled="true"]:hover { background: rgba(255,255,255,0.08); transform: none; }
 .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding: 16px 0; text-align: center; font-size: 0.85rem; color: #A8BECB; }
 
 /* Flotantes */

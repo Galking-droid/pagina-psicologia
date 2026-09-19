@@ -128,7 +128,11 @@ if (track && dotsWrap) {
             const dist = Math.abs(center - cardCenter);
             if (dist < minDist) { minDist = dist; closest = i; }
         });
-        dots.forEach((d, i) => d.classList.toggle('active', i === closest));
+        dots.forEach((d, i) => {
+            d.classList.toggle('active', i === closest);
+            if (i === closest) d.setAttribute('aria-current', 'true');
+            else d.removeAttribute('aria-current');
+        });
     };
     track.addEventListener('scroll', () => {
         window.requestAnimationFrame(updateDots);
@@ -140,6 +144,11 @@ if (track && dotsWrap) {
     };
     if (prevBtn) prevBtn.addEventListener('click', () => scrollByCard(-1));
     if (nextBtn) nextBtn.addEventListener('click', () => scrollByCard(1));
+    // Navegación por teclado con el foco en el carrusel
+    track.addEventListener('keydown', (event) => {
+        if (event.key === 'ArrowLeft') { event.preventDefault(); scrollByCard(-1); }
+        if (event.key === 'ArrowRight') { event.preventDefault(); scrollByCard(1); }
+    });
 }
 
 // Formulario -> WhatsApp
